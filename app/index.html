@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中国国家统计 · China National Statistics</title>
+<meta name="description" content="中国国家统计数据：2024年国内生产总值、人口、就业、物价、贸易等官方公报数据，图表与数据表。">
+<link rel="stylesheet" href="styles.css">
+<script src="data.js" defer></script>
+<script src="charts.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <div class="brand-mark">统</div>
+      <div>
+        <div class="brand-name">中国国家统计 <span class="brand-en">China National Statistics</span></div>
+        <div class="brand-sub">2024年国民经济和社会发展统计公报数据 · 数据截至2024年末</div>
+      </div>
+    </div>
+    <nav class="nav" aria-label="栏目">
+      <a href="#/home">首页 Home</a>
+      <a href="#/economy">经济 Economy</a>
+      <a href="#/population">人口 Population</a>
+      <a href="#/employment">就业 Employment</a>
+      <a href="#/prices">物价 Prices</a>
+      <a href="#/trade">贸易 Trade</a>
+      <a href="#/tables">数据表 Tables</a>
+      <a href="#/about">来源说明 Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ================= HOME ================= -->
+<section id="page-home" class="page" data-title="首页">
+  <div class="hero">
+    <h1>中国，2024年<br><span class="hero-en">China in 2024 — the numbers</span></h1>
+    <p class="hero-p">国内生产总值 <b>134.91万亿元</b>，增长 <b>5.0%</b>；年末人口 <b>14.08亿</b>；货物进出口 <b>43.85万亿元</b>，规模创历史新高。以下每个数字都出自国家统计局、海关总署的官方发布，来源见每页页脚。</p>
+    <div class="hero-links">
+      <a class="btn" href="#/economy">看经济 →</a>
+      <a class="btn ghost" href="#/tables">查数据总表 →</a>
+    </div>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="kpi-v">134.91<span class="kpi-u">万亿元</span></div><div class="kpi-l">国内生产总值 GDP · 2024</div><div class="kpi-d">比上年增长 5.0%</div></div>
+    <div class="kpi"><div class="kpi-v">14.08<span class="kpi-u">亿人</span></div><div class="kpi-l">年末全国人口 · 2024</div><div class="kpi-d">比上年末减少 139万人</div></div>
+    <div class="kpi"><div class="kpi-v">+0.2<span class="kpi-u">%</span></div><div class="kpi-l">居民消费价格 CPI · 2024</div><div class="kpi-d">核心 CPI 上涨 0.5%</div></div>
+    <div class="kpi"><div class="kpi-v">43.85<span class="kpi-u">万亿元</span></div><div class="kpi-l">货物进出口总额 · 2024</div><div class="kpi-d">增长 5.0%，规模创历史新高</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <h2>十年经济增速 <span class="h-en">GDP growth, 2015–2024</span></h2>
+      <div class="toggle" id="gdp-range">
+        <button data-v="10" class="on">10年</button><button data-v="5">近5年</button>
+      </div>
+    </div>
+    <div class="chart-box"><canvas id="chart-gdp-home" class="chart home-chart"></canvas></div>
+    <p class="note">不变价同比增速。2021–2023年为第五次全国经济普查修订后数（2023年初步核算为5.2%）；2024年为初步核算数。来源：国家统计局历年统计公报。将鼠标悬停在柱子上查看精确数值，手机上点一下柱子同样可以查看。</p>
+  </div>
+
+  <div class="grid-3">
+    <a class="sec-card" href="#/economy"><b>经济 Economy</b><span>GDP、三产结构、省份排名、收入消费</span></a>
+    <a class="sec-card" href="#/population"><b>人口 Population</b><span>14.08亿人、出生与死亡、年龄结构、城镇化</span></a>
+    <a class="sec-card" href="#/employment"><b>就业 Employment</b><span>7.34亿就业人员、失业率、农民工</span></a>
+    <a class="sec-card" href="#/prices"><b>物价 Prices</b><span>CPI、核心CPI、PPI、八大类涨跌</span></a>
+    <a class="sec-card" href="#/trade"><b>贸易 Trade</b><span>进出口43.85万亿、伙伴与商品结构</span></a>
+    <a class="sec-card" href="#/tables"><b>数据表 Tables</b><span>2021–2024年主要指标总表，可排序、可搜索、可下载</span></a>
+  </div>
+
+  <div class="card">
+    <h2>2024年亮点 <span class="h-en">Highlights</span></h2>
+    <ul class="facts">
+      <li><b>粮食产量 7.07亿吨</b>，增产 1.6%，连续10年稳定在 1.3万亿斤以上。</li>
+      <li><b>新能源汽车产量 1316.8万辆</b>，增长 38.7%；太阳能电池产量 6.8亿千瓦，增长 15.7%。</li>
+      <li><b>研究与试验发展（R&amp;D）经费 3.61万亿元</b>，增长 8.3%，投入强度 2.68%。</li>
+      <li><b>城镇新增就业 1256万人</b>；全国居民人均可支配收入 41314元，实际增长 5.1%。</li>
+    </ul>
+    <p class="note">来源：国家统计局《中华人民共和国2024年国民经济和社会发展统计公报》，2025年2月28日。</p>
+  </div>
+</section>
+
+<!-- ================= ECONOMY ================= -->
+<section id="page-economy" class="page" data-title="经济" style="display:none">
+  <h1 class="page-h">经济 <span class="h-en">Economy</span></h1>
+  <p class="page-intro">2024年国内生产总值 1349084亿元，比上年增长 5.0%。分季度看，一季度增长 5.3%，二季度 4.7%，三季度 4.6%，四季度 5.4%。</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="kpi-v">1349084<span class="kpi-u">亿元</span></div><div class="kpi-l">国内生产总值 · 2024</div><div class="kpi-d">增长 5.0%</div></div>
+    <div class="kpi"><div class="kpi-v">95749<span class="kpi-u">元</span></div><div class="kpi-l">人均国内生产总值</div><div class="kpi-d">增长 5.1%</div></div>
+    <div class="kpi"><div class="kpi-v">487895<span class="kpi-u">亿元</span></div><div class="kpi-l">社会消费品零售总额</div><div class="kpi-d">增长 3.5%</div></div>
+    <div class="kpi"><div class="kpi-v">36130<span class="kpi-u">亿元</span></div><div class="kpi-l">R&amp;D 经费</div><div class="kpi-d">增长 8.3%，强度 2.68%</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <h2>国内生产总值增速 <span class="h-en">Real GDP growth, 2015–2024</span></h2>
+      <div class="toggle" id="gdp-range-eco">
+        <button data-v="10" class="on">10年</button><button data-v="5">近5年</button>
+      </div>
+    </div>
+    <div class="chart-box"><canvas id="chart-gdp" class="chart"></canvas></div>
+    <p class="note">将鼠标悬停在柱子上查看精确数值，手机上点一下柱子同样可以查看。2020年增速 2.3% 为疫情年份低点，2021年反弹至 8.6%。</p>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h2>2024年分季度增速 <span class="h-en">Quarterly growth</span></h2>
+      <div class="chart-box"><canvas id="chart-quarter" class="chart"></canvas></div>
+      <p class="note">四季度回升至 5.4%，为全年最高。</p>
+    </div>
+    <div class="card">
+      <h2>三次产业结构 <span class="h-en">Structure by sector</span></h2>
+      <div class="chart-box"><canvas id="chart-industry" class="chart"></canvas></div>
+      <p class="note">第一产业 91414亿元，第二产业 492087亿元，第三产业 765583亿元。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <h2>省份经济总量前八名 <span class="h-en">Top 8 provinces by GDP, 2024</span></h2>
+      <div class="toggle" id="prov-sort">
+        <button data-v="gdp" class="on">按总量</button><button data-v="growth">按增速</button>
+      </div>
+    </div>
+    <div class="chart-box tall"><canvas id="chart-province" class="chart tall"></canvas></div>
+    <p class="note" id="prov-note">按2024年地区生产总值排序（亿元）。广东连续36年居全国首位。</p>
+  </div>
+
+  <div class="card">
+    <h2>四大区域 <span class="h-en">Four regions, 2024</span></h2>
+    <table class="tbl">
+      <thead><tr><th>地区 Region</th><th>生产总值（亿元）</th><th>增速</th></tr></thead>
+      <tbody>
+        <tr><td>东部 Eastern</td><td>702356</td><td>+5.0%</td></tr>
+        <tr><td>西部 Western</td><td>287350</td><td>+5.2%</td></tr>
+        <tr><td>中部 Central</td><td>287156</td><td>+5.0%</td></tr>
+        <tr><td>东北 Northeast</td><td>63451</td><td>+4.4%</td></tr>
+      </tbody>
+    </table>
+    <p class="note">京津冀 115394亿元（+5.2%），长江经济带 630228亿元（+5.4%），长三角 331691亿元（+5.5%）。来源：国家统计局2024年统计公报。</p>
+  </div>
+</section>
+
+<!-- ================= POPULATION ================= -->
+<section id="page-population" class="page" data-title="人口" style="display:none">
+  <h1 class="page-h">人口 <span class="h-en">Population</span></h1>
+  <p class="page-intro">2024年末全国人口 140828万人，比上年末减少 139万人。出生 954万人，死亡 1093万人，自然增长率 -0.99‰。城镇常住人口 94350万人，城镇化率 67.00%。</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="kpi-v">140828<span class="kpi-u">万人</span></div><div class="kpi-l">年末全国人口 · 2024</div><div class="kpi-d">减少 139万人</div></div>
+    <div class="kpi"><div class="kpi-v">954<span class="kpi-u">万人</span></div><div class="kpi-l">全年出生人口</div><div class="kpi-d">出生率 6.77‰，比2023年多 52万人</div></div>
+    <div class="kpi"><div class="kpi-v">67.00<span class="kpi-u">%</span></div><div class="kpi-l">常住人口城镇化率</div><div class="kpi-d">提高 0.84个百分点</div></div>
+    <div class="kpi"><div class="kpi-v">22.0<span class="kpi-u">%</span></div><div class="kpi-l">60岁及以上人口占比</div><div class="kpi-d">31031万人，其中65岁及以上 15.6%</div></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h2>年末总人口 <span class="h-en">Total population, 2021–2024</span></h2>
+      <div class="chart-box"><canvas id="chart-pop" class="chart"></canvas></div>
+      <p class="note">2021年 141260万人 → 2024年 140828万人，三年减少 432万人。</p>
+    </div>
+    <div class="card">
+      <h2>全年出生人口 <span class="h-en">Births, 2021–2024</span></h2>
+      <div class="chart-box"><canvas id="chart-births" class="chart"></canvas></div>
+      <p class="note">2024年出生人口 954万人，自2017年以来首次回升（2023年为 902万人）。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>年龄结构 <span class="h-en">Age structure, end of 2024</span></h2>
+    <div class="chart-box"><canvas id="chart-age" class="chart"></canvas></div>
+    <p class="note">16–59岁劳动年龄人口 85798万人，占 60.9%；0–15岁 23999万人，占 17.1%。</p>
+  </div>
+
+  <div class="card">
+    <h2>人口构成（2024年末） <span class="h-en">Composition</span></h2>
+    <table class="tbl">
+      <thead><tr><th>指标 Indicator</th><th>人数（万人）</th><th>占比 / 说明</th></tr></thead>
+      <tbody>
+        <tr><td>男性 Male</td><td>71909</td><td>总人口性别比 104.34（女=100）</td></tr>
+        <tr><td>女性 Female</td><td>68919</td><td>—</td></tr>
+        <tr><td>城镇常住人口 Urban</td><td>94350</td><td>67.0%，比上年末增加 1083万人</td></tr>
+        <tr><td>乡村常住人口 Rural</td><td>46478</td><td>33.0%，减少 1222万人</td></tr>
+        <tr><td>全年死亡人口 Deaths</td><td>1093</td><td>死亡率 7.76‰</td></tr>
+      </tbody>
+    </table>
+    <p class="note">来源：国家统计局2024年统计公报。人口数包括31个省、自治区、直辖市和现役军人，不包括港澳台居民和外籍人员。</p>
+  </div>
+</section>
+
+<!-- ================= EMPLOYMENT ================= -->
+<section id="page-employment" class="page" data-title="就业" style="display:none">
+  <h1 class="page-h">就业 <span class="h-en">Employment</span></h1>
+  <p class="page-intro">2024年末全国就业人员 73439万人，其中城镇就业人员 47345万人，占 64.5%。全年城镇新增就业 1256万人，全国城镇调查失业率平均值 5.1%。</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="kpi-v">73439<span class="kpi-u">万人</span></div><div class="kpi-l">年末全国就业人员</div><div class="kpi-d">城镇就业 47345万人，占 64.5%</div></div>
+    <div class="kpi"><div class="kpi-v">5.1<span class="kpi-u">%</span></div><div class="kpi-l">城镇调查失业率（年均）</div><div class="kpi-d">比上年下降 0.1个百分点</div></div>
+    <div class="kpi"><div class="kpi-v">1256<span class="kpi-u">万人</span></div><div class="kpi-l">全年城镇新增就业</div><div class="kpi-d">比上年多增 12万人</div></div>
+    <div class="kpi"><div class="kpi-v">29973<span class="kpi-u">万人</span></div><div class="kpi-l">农民工总量</div><div class="kpi-d">增长 0.7%，外出农民工 17871万人</div></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h2>城镇调查失业率 <span class="h-en">Urban surveyed unemployment, 2021–2024</span></h2>
+      <div class="chart-box"><canvas id="chart-unemp" class="chart"></canvas></div>
+      <p class="note">2022年 5.6% 为四年最高；2024年12月为 5.1%，31个大城市为 5.0%。</p>
+    </div>
+    <div class="card">
+      <h2>城镇新增就业 <span class="h-en">New urban jobs, 2021–2024</span></h2>
+      <div class="chart-box"><canvas id="chart-jobs" class="chart"></canvas></div>
+      <p class="note">四年均在 1200万人以上。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>就业数据总览 <span class="h-en">Overview, 2021–2024</span></h2>
+    <table class="tbl">
+      <thead><tr><th>年份</th><th>就业人员（万人）</th><th>城镇就业（万人）</th><th>城镇新增就业（万人）</th><th>失业率均值</th><th>农民工（万人）</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>74652</td><td>46773</td><td>1269</td><td>5.1%</td><td>29251</td></tr>
+        <tr><td>2022</td><td>73351</td><td>45931</td><td>1206</td><td>5.6%</td><td>29562</td></tr>
+        <tr><td>2023</td><td>74041</td><td>47032</td><td>1244</td><td>5.2%</td><td>29753</td></tr>
+        <tr><td>2024</td><td>73439</td><td>47345</td><td>1256</td><td>5.1%</td><td>29973</td></tr>
+      </tbody>
+    </table>
+    <p class="note">2024年全国企业就业人员周平均工作时间 49.0小时。来源：国家统计局历年统计公报。</p>
+  </div>
+</section>
+
+<!-- ================= PRICES ================= -->
+<section id="page-prices" class="page" data-title="物价" style="display:none">
+  <h1 class="page-h">物价 <span class="h-en">Prices</span></h1>
+  <p class="page-intro">2024年居民消费价格（CPI）比上年上涨 0.2%，扣除食品和能源的核心 CPI 上涨 0.5%；工业生产者出厂价格（PPI）下降 2.2%。</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="kpi-v">+0.2<span class="kpi-u">%</span></div><div class="kpi-l">居民消费价格 CPI · 2024</div><div class="kpi-d">12月同比 +0.1%</div></div>
+    <div class="kpi"><div class="kpi-v">+0.5<span class="kpi-u">%</span></div><div class="kpi-l">核心 CPI（扣食品和能源）</div><div class="kpi-d">2023年为 +0.7%</div></div>
+    <div class="kpi"><div class="kpi-v">−2.2<span class="kpi-u">%</span></div><div class="kpi-l">工业生产者出厂价格 PPI</div><div class="kpi-d">购进价格同样下降 2.2%</div></div>
+    <div class="kpi"><div class="kpi-v">+7.7<span class="kpi-u">%</span></div><div class="kpi-l">猪肉价格 · 2024</div><div class="kpi-d">鲜菜 +5.0%，鲜果 −3.5%</div></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h2>CPI 涨幅 <span class="h-en">CPI change, 2021–2024</span></h2>
+      <div class="chart-box"><canvas id="chart-cpi" class="chart"></canvas></div>
+      <p class="note">2023、2024连续两年涨幅 0.2%，处于低位。</p>
+    </div>
+    <div class="card">
+      <h2>CPI 八大类涨跌 <span class="h-en">CPI by category, 2024</span></h2>
+      <div class="chart-box"><canvas id="chart-cpi-cat" class="chart"></canvas></div>
+      <p class="note">交通通信下降 1.9%，是唯一明显下降的大类；其他用品及服务上涨 3.8% 居首。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>物价指标 <span class="h-en">Price indicators, 2021–2024</span></h2>
+    <table class="tbl">
+      <thead><tr><th>年份</th><th>CPI</th><th>核心 CPI</th><th>PPI</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>+0.9%</td><td>+0.8%</td><td>+8.1%</td></tr>
+        <tr><td>2022</td><td>+2.0%</td><td>+0.9%</td><td>+4.1%</td></tr>
+        <tr><td>2023</td><td>+0.2%</td><td>+0.7%</td><td>−3.0%</td></tr>
+        <tr><td>2024</td><td>+0.2%</td><td>+0.5%</td><td>−2.2%</td></tr>
+      </tbody>
+    </table>
+    <p class="note">来源：国家统计局历年统计公报。</p>
+  </div>
+</section>
+
+<!-- ================= TRADE ================= -->
+<section id="page-trade" class="page" data-title="贸易" style="display:none">
+  <h1 class="page-h">贸易 <span class="h-en">Trade</span></h1>
+  <p class="page-intro">2024年货物进出口总额 438468亿元，比上年增长 5.0%，规模创历史新高。其中出口 254545亿元，增长 7.1%；进口 183923亿元，增长 2.3%；贸易顺差 70622亿元。</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="kpi-v">43.85<span class="kpi-u">万亿元</span></div><div class="kpi-l">货物进出口总额 · 2024</div><div class="kpi-d">增长 5.0%</div></div>
+    <div class="kpi"><div class="kpi-v">25.45<span class="kpi-u">万亿元</span></div><div class="kpi-l">出口 Exports</div><div class="kpi-d">增长 7.1%</div></div>
+    <div class="kpi"><div class="kpi-v">18.39<span class="kpi-u">万亿元</span></div><div class="kpi-l">进口 Imports</div><div class="kpi-d">增长 2.3%</div></div>
+    <div class="kpi"><div class="kpi-v">7.06<span class="kpi-u">万亿元</span></div><div class="kpi-l">贸易顺差 Surplus</div><div class="kpi-d">12月单月进出口 40670亿元</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <h2>进出口规模 <span class="h-en">Goods trade, 2020–2024</span></h2>
+      <div class="toggle" id="trade-metric">
+        <button data-v="total" class="on">总额</button><button data-v="exports">出口</button><button data-v="imports">进口</button>
+      </div>
+    </div>
+    <div class="chart-box"><canvas id="chart-trade" class="chart"></canvas></div>
+    <p class="note" id="trade-note">堆叠柱：下段出口、上段进口；柱顶数字为进出口总额。</p>
+  </div>
+
+  <div class="card">
+    <h2>贸易伙伴与结构 <span class="h-en">Partners &amp; structure, 2024</span></h2>
+    <table class="tbl">
+      <thead><tr><th>项目 Item</th><th>数值</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>对共建“一带一路”国家进出口</td><td>22.07万亿元（+6.4%）</td><td>占进出口总额 50.3%，首次过半</td></tr>
+        <tr><td>对东盟进出口</td><td>增长 9.0%</td><td>连续5年互为第一大贸易伙伴</td></tr>
+        <tr><td>机电产品出口</td><td>占出口总额 59.4%</td><td>增长 8.7%</td></tr>
+        <tr><td>民营企业进出口</td><td>占进出口总额 55.5%</td><td>2024年占比（海关总署）</td></tr>
+        <tr><td>跨境电商进出口</td><td>2.63万亿元</td><td>比2020年多 1万亿元</td></tr>
+      </tbody>
+    </table>
+    <p class="note">来源：海关总署2024年进出口数据发布（2025年1月13日）及国家统计局2024年统计公报。</p>
+  </div>
+</section>
+
+<!-- ================= TABLES ================= -->
+<section id="page-tables" class="page" data-title="数据表" style="display:none">
+  <h1 class="page-h">数据总表 <span class="h-en">Key indicators, 2021–2024</span></h1>
+  <p class="page-intro">主要指标四年总表。点列标题可排序；在搜索框输入年份或关键词可筛选；点“下载 CSV”可把整表存为电子表格。</p>
+  <div class="table-tools">
+    <input id="table-search" type="search" placeholder="搜索年份或数字，如：2024…" aria-label="搜索数据表">
+    <button id="csv-btn" class="btn">下载 CSV ↓</button>
+    <span id="table-count" class="muted"></span>
+  </div>
+  <div class="table-scroll">
+    <table class="tbl" id="master-table">
+      <thead><tr>
+        <th data-k="year">年份 ↕</th><th data-k="gdp">国内生产总值 ↕</th><th data-k="pop">年末人口 ↕</th>
+        <th data-k="urban">城镇化率 ↕</th><th data-k="unemp">城镇调查失业率 ↕</th><th data-k="jobs">城镇新增就业 ↕</th>
+        <th data-k="cpi">CPI ↕</th><th data-k="ppi">PPI ↕</th><th data-k="trade">货物进出口总额 ↕</th>
+        <th data-k="income">人均可支配收入 ↕</th><th data-k="retail">社会消费品零售总额 ↕</th>
+      </tr></thead>
+      <tbody id="master-table-body"></tbody>
+    </table>
+  </div>
+  <p class="note">口径说明：2021–2023 年为第五次全国经济普查修订后数，2024 年为初步核算数。人口为年末数。失业率为全年平均值。来源：国家统计局历年统计公报、海关总署。</p>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="page-about" class="page" data-title="来源说明" style="display:none">
+  <h1 class="page-h">来源说明 <span class="h-en">Sources &amp; notes</span></h1>
+  <div class="card">
+    <h2>数据来源 <span class="h-en">Sources</span></h2>
+    <ol class="sources">
+      <li>国家统计局《中华人民共和国2024年国民经济和社会发展统计公报》，2025年2月28日——本站绝大多数数字的来源。</li>
+      <li>国家统计局《中华人民共和国2023年国民经济和社会发展统计公报》，2024年2月29日。</li>
+      <li>国家统计局《中华人民共和国2022年国民经济和社会发展统计公报》，2023年2月28日。</li>
+      <li>国家统计局《中华人民共和国2021年国民经济和社会发展统计公报》，2022年2月28日。</li>
+      <li>海关总署2024年货物贸易进出口数据，2025年1月13日发布。</li>
+      <li>海关总署2023年货物贸易进出口数据，2024年1月12日发布。</li>
+      <li>国家统计局《2024年我国研究与试验发展（R&amp;D）经费超过3.6万亿元》，2025年1月23日。</li>
+      <li>各省（自治区、直辖市）统计局2024年地区生产总值初步核算数（广东、江苏、山东、浙江、四川、河南、湖北、福建）。</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h2>口径说明 <span class="h-en">Notes on methods</span></h2>
+    <ul class="facts">
+      <li>国内生产总值及增速为不变价核算；2024年为初步核算数，后续可能修订。</li>
+      <li>2021–2023年 GDP 增速为第五次全国经济普查修订后数；其中2023年初步核算为 5.2%，修订后为 5.4%。</li>
+      <li>人口数为年末数，包括31个省、自治区、直辖市和现役军人，不包括港澳台居民和外籍人员。</li>
+      <li>城镇调查失业率为全年平均值；农民工指户籍仍在农村，在本地从事非农产业或外出从业6个月及以上的劳动者。</li>
+      <li>进出口为货物贸易，按人民币计价；2024年进出口总额 438468亿元，约合 6.1万亿美元。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>关于本站 <span class="h-en">About this site</span></h2>
+    <p>本站为独立制作的学习演示站点，全部页面、图表与文字均为原创，与国家统计局、海关总署无关。所有图表由本站代码在浏览器本地绘制，不加载任何外部资源；数据可离线查看。</p>
+    <p><a href="#/home">← 回首页</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>数据来源：国家统计局《中华人民共和国2024年国民经济和社会发展统计公报》（2025年2月28日）、海关总署进出口数据、各省统计局。Sources: National Bureau of Statistics of China, General Administration of Customs.</p>
+    <p>本站为独立制作，与国家统计局无关 · All charts drawn locally in your browser · 无外部请求 · 2024年数据</p>
+  </div>
+</footer>
+</body>
+</html>

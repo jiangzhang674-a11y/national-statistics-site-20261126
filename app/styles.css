@@ -1,0 +1,142 @@
+/* 中国国家统计站 —— 本地样式表。系统字体，不加载任何外部字体或图片。 */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #f7f4ee; color: #1a2b3c;
+  font-family: system-ui, -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.6;
+}
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+a { color: #16324f; }
+a:hover { color: #b03a2e; }
+
+/* 顶部栏 */
+.topbar { background: #16324f; color: #fff; position: sticky; top: 0; z-index: 50; box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+.topbar .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding-top: 10px; padding-bottom: 10px; }
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.brand-mark {
+  width: 44px; height: 44px; flex: 0 0 44px; border-radius: 8px;
+  background: #b03a2e; color: #fff; font-size: 26px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.brand-name { font-size: 19px; font-weight: 700; letter-spacing: .5px; }
+.brand-en { font-size: 12px; font-weight: 400; color: #b9c7d6; letter-spacing: .3px; }
+.brand-sub { font-size: 12px; color: #b9c7d6; }
+.nav { display: flex; flex-wrap: wrap; gap: 2px; margin-left: auto; }
+.nav a {
+  color: #dbe4ee; text-decoration: none; font-size: 14px; padding: 7px 10px;
+  border-radius: 6px; white-space: nowrap;
+}
+.nav a:hover { background: rgba(255,255,255,.12); color: #fff; }
+.nav a.active { background: #b03a2e; color: #fff; }
+
+/* 页面 */
+main { padding: 24px 0 8px; }
+.page-h { font-size: 28px; margin: 4px 0 6px; }
+.page-h .h-en, h2 .h-en { font-size: 14px; font-weight: 400; color: #7a7268; }
+.page-intro { font-size: 17px; color: #33414f; max-width: 860px; }
+.hero { background: #fff; border: 1px solid #e3ddd2; border-left: 6px solid #b03a2e; border-radius: 10px; padding: 22px 26px; }
+.hero h1 { font-size: 32px; line-height: 1.25; margin: 0 0 8px; }
+.hero-en { font-size: 16px; color: #7a7268; font-weight: 400; }
+.hero-p { font-size: 17px; max-width: 820px; margin: 0; }
+.hero-p b { color: #b03a2e; }
+.hero-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+.btn {
+  display: inline-block; background: #b03a2e; color: #fff; border: none; cursor: pointer;
+  font-size: 15px; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-family: inherit;
+}
+.btn:hover { background: #962e24; color: #fff; }
+.btn.ghost { background: #fff; color: #16324f; border: 1px solid #16324f; }
+.btn.ghost:hover { background: #eef2f6; color: #16324f; }
+
+/* 关键数字卡 */
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0; }
+.kpi { background: #fff; border: 1px solid #e3ddd2; border-radius: 10px; padding: 14px 18px; }
+.kpi-v { font-size: 30px; font-weight: 800; color: #16324f; letter-spacing: -.5px; }
+.kpi-u { font-size: 15px; font-weight: 600; color: #7a7268; margin-left: 2px; }
+.kpi-l { font-size: 14px; color: #33414f; margin-top: 2px; }
+.kpi-d { font-size: 13px; color: #2e7d6b; margin-top: 2px; }
+
+/* 内容卡片 */
+.card { background: #fff; border: 1px solid #e3ddd2; border-radius: 10px; padding: 20px 22px; margin: 16px 0; }
+.card h2 { font-size: 20px; margin: 0 0 12px; }
+.card-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.card-head h2 { margin-bottom: 8px; }
+.note { font-size: 13px; color: #7a7268; margin: 10px 0 0; }
+.muted { font-size: 13px; color: #7a7268; }
+.facts { margin: 6px 0; padding-left: 20px; }
+.facts li { margin: 8px 0; }
+.sources { margin: 6px 0; padding-left: 22px; }
+.sources li { margin: 8px 0; }
+
+/* 首页栏目卡 */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 16px 0; }
+.sec-card {
+  background: #16324f; color: #fff; border-radius: 10px; padding: 18px; text-decoration: none;
+  display: block;
+}
+.sec-card:hover { background: #1e4266; color: #fff; }
+.sec-card b { display: block; font-size: 18px; margin-bottom: 4px; }
+.sec-card span { font-size: 13.5px; color: #b9c7d6; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid-2 .card { margin: 0; }
+
+/* 图表：首页图特意矮一些，让 1280×860 的封面截图能完整看到
+ * GDP 图的年份横轴，不被裁掉；其它页的图保持 280px。 */
+.chart-box { position: relative; overflow: visible; }
+canvas.chart { display: block; width: 100%; height: 280px; }
+canvas.chart.tall { height: 340px; }
+canvas.chart.home-chart { height: 230px; }
+.chart-tip {
+  position: absolute; z-index: 5; pointer-events: none; background: #16324f; color: #fff;
+  font-size: 13px; padding: 6px 10px; border-radius: 6px; max-width: 220px; line-height: 1.5;
+}
+.chart-tip b { color: #ffd9a8; }
+
+/* 切换按钮 */
+.toggle { display: inline-flex; border: 1px solid #c9c2b4; border-radius: 8px; overflow: hidden; }
+.toggle button {
+  background: #fff; border: none; padding: 7px 14px; font-size: 14px; cursor: pointer;
+  color: #33414f; font-family: inherit;
+}
+.toggle button + button { border-left: 1px solid #c9c2b4; }
+.toggle button.on { background: #16324f; color: #fff; }
+
+/* 表格 */
+.tbl { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.tbl th, .tbl td { border-bottom: 1px solid #e3ddd2; padding: 9px 10px; text-align: left; }
+.tbl thead th { background: #f0ece3; font-size: 13.5px; white-space: nowrap; }
+.tbl th[data-k] { cursor: pointer; user-select: none; }
+.tbl th[data-k]:hover { color: #b03a2e; }
+.tbl th.sorted { color: #b03a2e; }
+.table-scroll { overflow-x: auto; background: #fff; border: 1px solid #e3ddd2; border-radius: 10px; }
+.table-scroll .tbl { min-width: 900px; }
+.table-tools { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin: 14px 0; }
+.table-tools input[type="search"] {
+  flex: 1 1 240px; font-size: 15px; padding: 10px 12px; border: 1px solid #c9c2b4;
+  border-radius: 8px; font-family: inherit; background: #fff;
+}
+
+/* 页脚 */
+.footer { border-top: 1px solid #e3ddd2; margin-top: 34px; padding: 20px 0 30px; font-size: 13px; color: #7a7268; }
+.footer p { margin: 6px 0; }
+
+/* 手机 */
+@media (max-width: 760px) {
+  body { font-size: 15px; }
+  .wrap { padding: 0 14px; }
+  .topbar .wrap { padding-top: 8px; padding-bottom: 8px; }
+  .nav { margin-left: 0; overflow-x: visible; flex-wrap: wrap; width: 100%; padding-bottom: 2px; }
+  .hero { padding: 18px; }
+  .hero h1 { font-size: 26px; }
+  .kpis { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .kpi-v { font-size: 24px; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-2 .card { margin: 0 0 14px; }
+  .card { padding: 16px; }
+  canvas.chart { height: 240px; }
+  canvas.chart.tall { height: 300px; }
+  canvas.chart.home-chart { height: 210px; }
+  .page-h { font-size: 24px; }
+}
